@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://szkolaterapiizabawa.pl/sitemap.xml
