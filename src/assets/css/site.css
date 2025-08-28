@@ -1,36 +1,37 @@
 /* src/assets/site.css */
 
 /* -------------------------------------------------
-   Brand tokens – dopasowane do nowych logotypów:
-   - Primary (turkus PTTZ)
-   - Secondary (zielony z rozetki PTTZ)
-   - Accent (pastelowy róż z ikony dziecka)
-   - Warm (pastelowa żółć tła ikony)
+   Brand tokens – dopasowane do nowych logotypów
 -------------------------------------------------- */
 :root{
-  --brand-primary:#2bb6c4;   /* turkus */
-  --brand-secondary:#8bcf6a; /* zielony */
-  --brand-accent:#f49ac1;    /* róż */
+  --brand-primary:#2bb6c4;   /* turkus PTTZ */
+  --brand-secondary:#8bcf6a; /* zielony PTTZ */
+  --brand-accent:#f49ac1;    /* pastelowy róż */
   --brand-warm:#f6f2c6;      /* jasna żółć */
 
   --text-900:#1f2937;
   --text-700:#374151;
   --line:#eef2f7;
+
+  /* domyślna wysokość nawigacji (desktop) */
+  --nav-h:72px;
+}
+/* mobile: niższa nawigacja */
+@media (max-width:991.98px){
+  :root{ --nav-h:64px; }
 }
 
 /* ------------------------------
    Base
 ------------------------------ */
 html{ -webkit-text-size-adjust:100%; }
+
 body{
   scroll-behavior:smooth;
   color:var(--text-900);
   background-color:#fff;
+  padding-top:var(--nav-h); /* offset pod fixed-top navbar */
 }
-
-/* Offset dla fixed-top navbar */
-@media (max-width:991.98px){ body{ padding-top:64px; } }
-@media (min-width:992px){ body{ padding-top:72px; } }
 
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
@@ -52,7 +53,6 @@ body{
 }
 .navbar.shadow-sm{ box-shadow:0 4px 16px rgba(31,41,55,.06); }
 
-/* Brand */
 .navbar-brand{
   font-weight:700;
   letter-spacing:.2px;
@@ -63,7 +63,7 @@ body{
 .navbar-brand:hover,
 .navbar-brand:focus{ opacity:.9; text-decoration:none; }
 
-/* Logo obrazkowe */
+/* Logo obrazkowe w brandzie */
 .brand-logo{
   height:32px;
   width:auto;
@@ -92,7 +92,7 @@ body{
   content:"";
   position:absolute;
   left:0; right:0;
-  bottom:-2px;
+  bottom:-2px;                 /* blisko tekstu */
   height:2px;
   background:var(--brand-primary);
   transform:scaleX(0);
@@ -112,7 +112,7 @@ body{
 /* Wyłącz dekorację na ewentualnym split-toggle */
 .navbar-nav > .nav-item > .nav-link.dropdown-toggle-split::after{ display:none; }
 
-/* Wyłącz niebieski ring z przeglądarki na linkach w nav */
+/* Bez „grubej” niebieskiej ramki */
 .navbar .nav-link:focus,
 .navbar .nav-link:focus-visible{
   outline:none;
@@ -124,7 +124,7 @@ body{
 .navbar-toggler{ border:none; padding:.4rem .5rem; }
 .navbar-toggler:focus{ box-shadow:none; }
 
-/* Hamburger w kolorze brandu (zakodowany kolor #2bb6c4) */
+/* Hamburger w kolorze brandu (#2bb6c4) */
 .navbar-light .navbar-toggler-icon,
 .navbar .navbar-toggler-icon{
   background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%232bb6c4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -153,14 +153,26 @@ body{
    Sekcje / komponenty
 ------------------------------ */
 
-/* Hero – gradient dopasowany do logotypów (turkus → zielony) */
+/* HERO: full viewport (minus navbar), gradient dopasowany do logotypów.
+   Dzięki min-height linki poniżej są poza pierwszym ekranem (trzeba przewinąć). */
 .hero-section{
   background:linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
   color:#fff;
-  padding:100px 0;
+  min-height:calc(100vh - var(--nav-h));
+  display:flex;             /* centrowanie treści w pionie */
+  align-items:center;
+  padding:64px 0;           /* wygodny oddech na górze/dole */
+}
+.hero-section .btn.btn-outline-light{
+  border-color:#fff;
+  color:#fff;
+}
+.hero-section .btn.btn-outline-light:hover{
+  background:#fff;
+  color:var(--brand-primary);
 }
 
-/* Delikatne tło „ciepłe” – można użyć przy wyróżnieniach */
+/* Dodatkowe warianty tła */
 .bg-warm{ background-color:var(--brand-warm) !important; }
 
 .section-padding{ padding:80px 0; }
@@ -171,7 +183,7 @@ body{
   box-shadow:0 14px 30px rgba(31,41,55,.08);
 }
 
-/* Kolory brandowe */
+/* Kolory brandowe / utility */
 .text-primary-custom{ color:var(--brand-primary) !important; }
 .text-accent{ color:var(--brand-accent) !important; }
 .bg-primary-soft{ background:rgba(43,182,196,.08) !important; }
@@ -196,14 +208,14 @@ body{
   color:#fff;
 }
 
-/* Obrazy w kartach/hero */
+/* Obrazy */
 .main-image img,
 .card img{ border-radius:.5rem; }
 
-/* Footer – ciemny, neutralny aby nie gryzł się z turkusem/zielenią */
+/* Footer – ciemny, neutralny */
 footer{ background-color:#22313a; color:#fff; }
 footer a{ color:inherit; }
 
-/* Pomocnicze odznaki (np. do cen bądź statusów) */
+/* Odznaki pomocnicze */
 .badge-brand{ background-color:var(--brand-primary); color:#fff; }
 .badge-accent{ background-color:var(--brand-accent); color:#5d2c3e; }
