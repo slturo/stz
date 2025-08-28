@@ -6,26 +6,247 @@
 </head>
 <body>
 @@include('partials/header.html')
+
 <section id="superwizje" class="section-padding">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <h2 class="display-5 fw-bold text-primary-custom mb-4">Program Szkolenia</h2>
-        <p class="lead mb-4">Profesjonalne wsparcie w rozwoju umiejętności terapeutycznych</p>
-        <ul class="list-unstyled">
-          <li>Podstawy terapii zabawą</li>
-          <li>Relacja terapeutyczna i zabawa symboliczna</li>
-          <li>Techniki pracy z rodzicami</li>
-          <li>Planowanie procesu i ewaluacja</li>
-        </ul>
-        <a href="#" class="btn btn-primary-custom btn-lg">Umów superwizję</a>
+    <!-- Nagłówek -->
+    <div class="row">
+      <div class="col-lg-9 mx-auto text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary-custom">Superwizje – program i wymagania</h2>
+        <p class="lead mb-0">Przygotowanie do <strong>Certyfikatu Terapeuty Zabawą PTTZ</strong> poprzez integrację wiedzy, praktyki klinicznej i superwizji.</p>
       </div>
-      <div class="col-lg-6 text-center">
-        <i class="fa-solid fa-users fa-8x text-primary-custom opacity-75"></i>
+    </div>
+
+    <!-- Cel / Zakres -->
+    <div class="row g-4 mb-4">
+      <!-- Cel szkolenia -->
+      <div id="cel" class="col-md-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-bullseye text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Cel szkolenia</h5>
+            </div>
+            <p class="mb-0">
+              Przygotowanie uczestników do uzyskania <strong>Certyfikatu Terapeuty Zabawą PTTZ</strong>
+              poprzez ukończenie programu opartego na szkole psychoterapii oraz rozwój kompetencji:
+              dogłębny i całościowy trening, terapia własna, doświadczenie kliniczne oraz superwizja.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zakres szkolenia -->
+      <div id="zakres" class="col-md-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-list-check text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Zakres szkolenia</h5>
+            </div>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                <span>Zorientowana na dziecko terapia zabawą (CCPT)</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                <span>Modele: Gestalt Play Therapy, Jungian Analytical Play Therapy, Adlerian Play Therapy</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                <span>Terapia relacji rodzic–dziecko (filial therapy, CPRT)</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                <span>Elementy terapii w piaskownicy (Sandtray Therapy)</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                <span>Analiza twórczości artystycznej dzieci i młodzieży</span>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                <span>Zastosowanie podejść niedyrektywnych i dyrektywnych: strata/żałoba, trauma, zaburzenia więzi, lęki, ADHD, spektrum autyzmu, nadużycia, PTSD; uwarunkowania prawne i etyka; przygotowanie miejsca pracy terapeuty</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Program / Superwizja -->
+    <div class="row g-4 mb-4">
+      <!-- Szczegółowy program -->
+      <div id="program" class="col-lg-7">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-book-open text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Szczegółowy program zajęć</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <span>Teorie terapii zabawą: niedyrektywne i dyrektywne; terapia skoncentrowana na dziecku, relacja dziecko–rodzic</span>
+                <span class="badge bg-light text-dark ms-3">65&nbsp;godz.</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <span>Praktyka warsztatowa: komunikacja, zabawa symboliczna, techniki plastyczne, piaskownica</span>
+                <span class="badge bg-light text-dark ms-3">50&nbsp;godz.</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <span>Naukowe podstawy terapii zabawą, analiza przypadków</span>
+                <span class="badge bg-light text-dark ms-3">30&nbsp;godz.</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <span>Historia terapii zabawą</span>
+                <span class="badge bg-light text-dark ms-3">5&nbsp;godz.</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <span>Etyka pracy z dzieckiem (w tym Kodeks PTTZ)</span>
+                <span class="badge bg-light text-dark ms-3">5&nbsp;godz.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doświadczenie superwizyjne -->
+      <div id="doswiadczenie" class="col-lg-5">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-user-check text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Doświadczenie superwizyjne</h5>
+            </div>
+            <p>Superwizję prowadzi <strong>Certyfikowany Superwizor Terapii Zabawą PTTZ (CTZ-S)</strong>. Obejmuje konsultacje oraz obserwowane sesje terapii zabawą.</p>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-check text-primary-custom me-2 mt-1"></i>
+                <span>Minimum <strong>5 sesji obserwowanych</strong> oraz <strong>35 godzin</strong> superwizji</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-check text-primary-custom me-2 mt-1"></i>
+                <span>Praca superwizyjna obejmuje min. troje dzieci w wieku 3–12 lat</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-check text-primary-custom me-2 mt-1"></i>
+                <span>Superwizja startuje po ukończeniu <strong>50 godzin</strong> szkolenia warsztatowego</span>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="fa-solid fa-check text-primary-custom me-2 mt-1"></i>
+                <span>Obserwacje na różnych etapach procesu; ocena kompetencji, dbałość o bezpieczeństwo dzieci i rodzin</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kadra / Warunki -->
+    <div class="row g-4 mb-4">
+      <!-- Kadra szkoleniowa -->
+      <div id="kadra" class="col-lg-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-users text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Kadra szkoleniowa</h5>
+            </div>
+            <ul class="mb-0">
+              <li>Psychoterapeuci i psychotraumatolodzy z Polski i zagranicy (z tłumaczeniem)</li>
+              <li>Certyfikowani terapeuci i superwizorzy terapii zabawą (APT, IC-PTA)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warunki ukończenia -->
+      <div id="warunki" class="col-lg-6">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-clipboard-list text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Warunki ukończenia szkolenia</h5>
+            </div>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-check text-primary-custom me-2 mt-1"></i>
+                <span><strong>100% obecności</strong> (z możliwością indywidualnego uzupełnienia nieobecności losowych)</span>
+              </li>
+              <li class="d-flex align-items-start mb-2">
+                <i class="fa-solid fa-check text-primary-custom me-2 mt-1"></i>
+                <span>Zdanie egzaminu końcowego: część teoretyczna (praca pisemna) i praktyczna przed komisją</span>
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="fa-solid fa-check text-primary-custom me-2 mt-1"></i>
+                <span>Uregulowanie wszystkich opłat</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kompetencje absolwenta -->
+    <div id="kompetencje" class="row g-4">
+      <div class="col-12">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-lightbulb text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Kompetencje absolwenta</h5>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-start mb-2">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Historia i teorie terapii zabawą; znaczenie zabawy w rozwoju dziecka</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-2">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Budowanie relacji terapeutycznej i planowanie procesu terapeutycznego</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-2">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Rozpoznawanie trudności rozwojowych i podstawy diagnostyki</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Praca z traumą dziecięcą</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-start mb-2">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Stosowanie technik i narzędzi terapii zabawą</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-2">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Etyka zawodowa i praca zgodnie z Kodeksem PTTZ</span>
+                  </li>
+                  <li class="d-flex align-items-start mb-2">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Prowadzenie dokumentacji i ewaluacji terapii</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1"></i>
+                    <span>Rozwój własnych kompetencji i dbałość o dobrostan psychiczny</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- /card-body -->
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
 @@include('partials/footer.html')
 </body>
 </html>

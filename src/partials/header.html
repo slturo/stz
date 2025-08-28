@@ -1,28 +1,82 @@
 
-<!-- src/partials/header.html -->
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand text-primary-custom" href="index.html">
-        <i class="fa-solid fa-brain me-2"></i>Szkoła Terapii Zabawą
+      <a class="navbar-brand d-flex align-items-center text-primary-custom" href="index.html">
+        <img
+            src="assets/img/logo.jpg"
+            alt="Szkoła Terapii Zabawą – logo"
+            class="brand-logo me-2"
+            width="40"
+            height="40"
+        >
+        <span>Szkoła Terapii Zabawą</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Szkolenia</a>
+
+          <!-- Szkolenia -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="trainings.html" id="navSzkolenia" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Szkolenia
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navSzkolenia">
+              <li><a class="dropdown-item" href="trainings.html">Nasze Szkolenia</a></li>
+              <li><a class="dropdown-item" href="trainings.html#our-trainings">Szczegóły Szkolenia</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="supervision.html">Superwizje</a>
+
+          <!-- Program -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="program.html" id="navProgram"
+               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Program
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navProgram">
+              <li><a class="dropdown-item" href="program.html#zakres">Zakres</a></li>
+              <li><a class="dropdown-item" href="program.html#harmonogram">Harmonogram</a></li>
+              <li><a class="dropdown-item" href="program.html#cennik">Cennik</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="requirements.html">Wymogi certyfikacyjne</a>
+
+
+          <!-- Wymogi certyfikacyjne -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="requirements.html" id="navWymogi" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Wymogi certyfikacyjne
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navWymogi">
+              <li><a class="dropdown-item" href="requirements.html">Wymogi PTTZ</a></li>
+              <li><a class="dropdown-item" href="requirements.html#sciezka">Ścieżka do certyfikatu</a></li>
+              <li><a class="dropdown-item" href="requirements.html#dokumenty">Dokumenty do pobrania</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contact.html">Pytania? Napisz do nas</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">O nas</a>
+
+          <!-- O nas -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" id="navONas" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              O nas
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navONas">
+              <li><a class="dropdown-item" href="about.html#misja">Misja i wartości</a></li>
+              <li><a class="dropdown-item" href="about.html#zespol">Zespół</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="contact.html">Kontakt</a></li>
+            </ul>
           </li>
+
         </ul>
       </div>
     </div>

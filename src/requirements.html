@@ -7,44 +7,190 @@
 </head>
 <body>
   @@include('partials/header.html')
-  <section id="wymogi" class="section-padding bg-light">
+  <section id="wymogi-pttz" class="section-padding bg-light">
     <div class="container">
+      <!-- Nagłówek -->
       <div class="row">
-        <div class="col-12 text-center mb-5">
+        <div class="col-lg-8 mx-auto text-center mb-5">
           <h2 class="display-5 fw-bold text-primary-custom">Wymogi Certyfikacyjne</h2>
-          <p class="lead">Wszystko co musisz wiedzieć o procesie certyfikacji</p>
+          <p class="lead mb-0">Zasady przyjęcia oraz kryteria uzyskania <strong>Certyfikatu Terapeuty Zabawą PTTZ</strong>.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="card">
+
+      <!-- Zasady przyjęcia / Kryteria -->
+      <div class="row g-4">
+        <!-- Zasady przyjęcia -->
+        <div class="col-md-6">
+          <div class="card h-100 card-hover">
             <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <h5 class="text-primary-custom mb-3">Wymagania formalne:</h5>
-                  <ul>
-                    <li>Ukończone studia magisterskie z psychologii</li>
-                    <li>480 godzin szkolenia teoretycznego</li>
-                    <li>120 godzin superwizji</li>
-                    <li>400 godzin praktyki terapeutycznej</li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <h5 class="text-primary-custom mb-3">Proces certyfikacji:</h5>
-                  <ul>
-                    <li>Złożenie dokumentów</li>
-                    <li>Egzamin teoretyczny</li>
-                    <li>Prezentacja przypadku</li>
-                    <li>Komisja egzaminacyjna</li>
-                  </ul>
-                </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fa-solid fa-clipboard-check text-primary-custom me-2" aria-hidden="true"></i>
+                <h5 class="card-title mb-0">Zasady przyjęcia</h5>
               </div>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Magister: psychologii, medycyny (lub kierunku medycznego) bądź nauk humanistycznych.</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Co najmniej <strong>II rok</strong> szkolenia w szkole/ośrodku psychoterapii.</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Terapia własna zgodna z wymogami instytucji szkolącej.</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Złożony wniosek rekrutacyjny z wymaganymi dokumentami.</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Odbyta rozmowa wstępna.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kryteria certyfikacji -->
+        <div class="col-md-6">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fa-solid fa-award text-primary-custom me-2" aria-hidden="true"></i>
+                <h5 class="card-title mb-0">Kryteria uzyskania certyfikatu PTTZ</h5>
+              </div>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Ukończone całościowe szkolenie z psychoterapii (potwierdzone świadectwem).</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Ukończone szkolenie z terapii zabawą w akredytowanym ośrodku <strong>PTTZ</strong>.</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Udokumentowane <strong>2000 godzin</strong> pracy z pacjentem/klientem.</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="fa-solid fa-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Udokumentowane <strong>350 godzin</strong> psychoterapii dzieci pod superwizją <strong>CTZ-S</strong>.</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                  <span>Członkostwo w Polskim Towarzystwie Terapii Zabawą.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Ścieżka do certyfikatu -->
+  <section id="sciezka" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h3 class="fw-bold text-primary-custom">Ścieżka do certyfikatu</h3>
+          <p class="mb-0">Zobacz kolejne kroki — od kwalifikacji po złożenie wniosku.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex">
+              <i class="fa-solid fa-user-check me-3 mt-1" aria-hidden="true"></i>
+              <span>Weryfikacja spełnienia <a href="#wymogi-pttz">zasad przyjęcia</a>.</span>
+            </li>
+            <li class="list-group-item d-flex">
+              <i class="fa-solid fa-graduation-cap me-3 mt-1" aria-hidden="true"></i>
+              <span>Realizacja szkolenia z terapii zabawą w ośrodku akredytowanym PTTZ.</span>
+            </li>
+            <li class="list-group-item d-flex">
+              <i class="fa-solid fa-briefcase me-3 mt-1" aria-hidden="true"></i>
+              <span>Gromadzenie dokumentacji godzin pracy klinicznej i superwizji.</span>
+            </li>
+            <li class="list-group-item d-flex">
+              <i class="fa-solid fa-file-signature me-3 mt-1" aria-hidden="true"></i>
+              <span>Przygotowanie i złożenie wniosku certyfikacyjnego w PTTZ.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="col-md-6">
+          <div class="alert alert-light border h-100">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fa-solid fa-circle-info text-primary-custom me-2" aria-hidden="true"></i>
+              <strong>Wskazówki</strong>
+            </div>
+            <ul class="mb-0">
+              <li>Dbaj o spójne i czytelne potwierdzenia godzin (praca, superwizja).</li>
+              <li>Zachowuj potwierdzenia udziału w szkoleniach i warsztatach.</li>
+              <li>W razie wątpliwości — napisz do nas, pomożemy skompletować dokumentację.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dokumenty do pobrania -->
+  <section id="dokumenty" class="section-padding bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h3 class="fw-bold text-primary-custom">Dokumenty do pobrania</h3>
+          <p class="mb-0">Wzory wniosków i listy wymaganych załączników.</p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/docs/wniosek-certyfikacyjny.pdf" class="btn btn-outline-primary w-100" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-pdf me-2" aria-hidden="true"></i> Wniosek certyfikacyjny (PDF)
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/docs/lista-zalacznikow.pdf" class="btn btn-outline-primary w-100" target="_blank" rel="noopener">
+            <i class="fa-solid fa-list-check me-2" aria-hidden="true"></i> Lista wymaganych załączników (PDF)
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="assets/docs/wzor-zestawienia-godzin.xlsx" class="btn btn-outline-primary w-100" target="_blank" rel="noopener">
+            <i class="fa-solid fa-table me-2" aria-hidden="true"></i> Zestawienie godzin (XLSX)
+          </a>
+        </div>
+      </div>
+
+      <p class="small text-muted mt-3">*Podmień linki na właściwe pliki, gdy będą dostępne.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="alert alert-light border d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+            <div class="mb-3 mb-md-0">
+              <strong>Masz pytania o wymogi?</strong> Skontaktuj się — podpowiemy, jak przejść proces krok po kroku.
+            </div>
+            <div class="d-flex gap-2">
+              <a href="contact.html" class="btn btn-outline-primary">Kontakt</a>
+              <a href="program.html" class="btn btn-primary-custom">Program szkolenia</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   @@include('partials/footer.html')
 </body>
 </html>

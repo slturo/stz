@@ -1,138 +1,209 @@
 /* src/assets/site.css */
 
-/* ------------------------------
-   Brand tokens
------------------------------- */
-:root {
-  --brand-primary: #667eea;   /* matches your current purple */
-  --text-900: #1f2937;
-  --text-700: #374151;
-  --line: #eef2f7;
+/* -------------------------------------------------
+   Brand tokens – dopasowane do nowych logotypów:
+   - Primary (turkus PTTZ)
+   - Secondary (zielony z rozetki PTTZ)
+   - Accent (pastelowy róż z ikony dziecka)
+   - Warm (pastelowa żółć tła ikony)
+-------------------------------------------------- */
+:root{
+  --brand-primary:#2bb6c4;   /* turkus */
+  --brand-secondary:#8bcf6a; /* zielony */
+  --brand-accent:#f49ac1;    /* róż */
+  --brand-warm:#f6f2c6;      /* jasna żółć */
+
+  --text-900:#1f2937;
+  --text-700:#374151;
+  --line:#eef2f7;
 }
 
 /* ------------------------------
    Base
 ------------------------------ */
-html { -webkit-text-size-adjust: 100%; }
-body {
-  scroll-behavior: smooth;
-  color: var(--text-900);
+html{ -webkit-text-size-adjust:100%; }
+body{
+  scroll-behavior:smooth;
+  color:var(--text-900);
+  background-color:#fff;
 }
 
-/* Offset for fixed-top navbar (approx.) */
-@media (max-width: 991.98px) { body { padding-top: 64px; } }
-@media (min-width: 992px)   { body { padding-top: 72px; } }
+/* Offset dla fixed-top navbar */
+@media (max-width:991.98px){ body{ padding-top:64px; } }
+@media (min-width:992px){ body{ padding-top:72px; } }
 
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
 }
 
 /* ------------------------------
    Navbar
 ------------------------------ */
-.navbar {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  background-color: #fff;
+.navbar{
+  padding-top:.75rem;
+  padding-bottom:.75rem;
+  background-color:#fff;
 }
+.navbar.shadow-sm{ box-shadow:0 4px 16px rgba(31,41,55,.06); }
 
-.navbar-brand {
-  font-weight: 700;            /* stronger than default */
-  letter-spacing: .2px;
-  color: var(--brand-primary) !important;
+/* Brand */
+.navbar-brand{
+  font-weight:700;
+  letter-spacing:.2px;
+  color:var(--brand-primary) !important;
+  display:inline-flex;
+  align-items:center;
 }
 .navbar-brand:hover,
-.navbar-brand:focus { opacity: .9; text-decoration: none; }
+.navbar-brand:focus{ opacity:.9; text-decoration:none; }
 
-.navbar-nav .nav-link {
-  position: relative;
-  padding: .5rem .25rem;
-  margin-left: 1.25rem;
-  font-weight: 500;
-  font-size: 1.05rem;
-  color: var(--text-700);
-  transition: color .2s ease;
+/* Logo obrazkowe */
+.brand-logo{
+  height:32px;
+  width:auto;
+  display:inline-block;
+  object-fit:contain;
+}
+@media (min-width:992px){
+  .brand-logo{ height:36px; }
 }
 
-/* Interactive underline */
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -6px;
-  height: 2px;
-  background: var(--brand-primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .2s ease;
+/* Linki w nawigacji */
+.navbar-nav .nav-link{
+  padding:.5rem .25rem;
+  margin-left:1.25rem;
+  font-weight:500;
+  font-size:1.05rem;
+  color:var(--text-700);
+  transition:color .2s ease;
 }
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus { color: var(--brand-primary); }
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link:focus::after,
-.navbar-nav .nav-link.active::after { transform: scaleX(1); }
-.navbar-nav .nav-link.active { color: var(--brand-primary); }
 
-/* Keyboard focus */
-.navbar-nav .nav-link:focus-visible {
-  outline: 2px solid var(--brand-primary);
-  outline-offset: 2px;
-  border-radius: 4px;
+/* Podkreślenie pod głównym linkiem (także dropdown-toggle) */
+.navbar-nav > .nav-item > .nav-link{
+  position:relative;
+}
+.navbar-nav > .nav-item > .nav-link::after{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  bottom:-2px;
+  height:2px;
+  background:var(--brand-primary);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .2s ease;
+}
+.navbar-nav > .nav-item > .nav-link:hover,
+.navbar-nav > .nav-item > .nav-link:focus{
+  color:var(--brand-primary);
+}
+.navbar-nav > .nav-item > .nav-link:hover::after,
+.navbar-nav > .nav-item > .nav-link:focus::after,
+.navbar-nav > .nav-item > .nav-link.active::after{
+  transform:scaleX(1);
+}
+
+/* Wyłącz dekorację na ewentualnym split-toggle */
+.navbar-nav > .nav-item > .nav-link.dropdown-toggle-split::after{ display:none; }
+
+/* Wyłącz niebieski ring z przeglądarki na linkach w nav */
+.navbar .nav-link:focus,
+.navbar .nav-link:focus-visible{
+  outline:none;
+  box-shadow:none;
+  border-radius:0;
 }
 
 /* Toggler (mobile) */
-.navbar-toggler { border: none; padding: .4rem .5rem; }
-.navbar-toggler:focus { box-shadow: none; }
+.navbar-toggler{ border:none; padding:.4rem .5rem; }
+.navbar-toggler:focus{ box-shadow:none; }
 
-/* Brand-colored hamburger icon */
+/* Hamburger w kolorze brandu (zakodowany kolor #2bb6c4) */
 .navbar-light .navbar-toggler-icon,
-.navbar .navbar-toggler-icon {
-  background-image:
-      url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23667eea' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar .navbar-toggler-icon{
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%232bb6c4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Mobile menu refinements */
-@media (max-width: 991.98px) {
-  .navbar-collapse { padding-top: .5rem; padding-bottom: .5rem; }
-  .navbar-nav .nav-link {
-    margin-left: 0;
-    padding: .75rem 0;
-    text-align: center;
-    font-size: 1.08rem;
+/* Dropdown – brak skoku i animacja strzałki */
+@media (min-width:992px){
+  .navbar .dropdown-toggle::after{ transition:transform .2s; }
+  .navbar .dropdown.show .dropdown-toggle::after{ transform:rotate(180deg); }
+  .navbar .dropdown-menu{ margin-top:0; }
+}
+
+/* Mobile menu */
+@media (max-width:991.98px){
+  .navbar-collapse{ padding-top:.5rem; padding-bottom:.5rem; }
+  .navbar-nav .nav-link{
+    margin-left:0;
+    padding:.75rem 0;
+    text-align:center;
+    font-size:1.08rem;
   }
-  .navbar-nav .nav-item + .nav-item .nav-link { border-top: 1px solid var(--line); }
-  .navbar-nav .nav-link::after { bottom: -2px; }
+  .navbar-nav .nav-item + .nav-item .nav-link{ border-top:1px solid var(--line); }
 }
-
-/* Slightly crisper shadow */
-.navbar.shadow-sm { box-shadow: 0 4px 16px rgba(31, 41, 55, .06); }
 
 /* ------------------------------
-   Your existing site styles
+   Sekcje / komponenty
 ------------------------------ */
-.hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 100px 0;
+
+/* Hero – gradient dopasowany do logotypów (turkus → zielony) */
+.hero-section{
+  background:linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+  color:#fff;
+  padding:100px 0;
 }
 
-.section-padding { padding: 80px 0; }
+/* Delikatne tło „ciepłe” – można użyć przy wyróżnieniach */
+.bg-warm{ background-color:var(--brand-warm) !important; }
 
-.card-hover { transition: transform 0.3s ease; }
-.card-hover:hover { transform: translateY(-5px); }
+.section-padding{ padding:80px 0; }
 
-.text-primary-custom { color: #667eea !important; }
-
-.btn-primary-custom {
-  background-color: #667eea;
-  border-color: #667eea;
-}
-.btn-primary-custom:hover {
-  background-color: #5a6fd8;
-  border-color: #5a6fd8;
+.card-hover{ transition:transform .3s ease, box-shadow .3s ease; }
+.card-hover:hover{
+  transform:translateY(-5px);
+  box-shadow:0 14px 30px rgba(31,41,55,.08);
 }
 
-footer {
-  background-color: #2c3e50;
-  color: white;
+/* Kolory brandowe */
+.text-primary-custom{ color:var(--brand-primary) !important; }
+.text-accent{ color:var(--brand-accent) !important; }
+.bg-primary-soft{ background:rgba(43,182,196,.08) !important; }
+.bg-accent-soft{ background:rgba(244,154,193,.12) !important; }
+
+/* Przyciski */
+.btn-primary-custom{
+  background-color:var(--brand-primary);
+  border-color:var(--brand-primary);
+  color:#fff;
 }
+.btn-primary-custom:hover{
+  background-color:#239eab; /* ciemniejszy turkus */
+  border-color:#239eab;
+}
+.btn-outline-primary{
+  color:var(--brand-primary);
+  border-color:var(--brand-primary);
+}
+.btn-outline-primary:hover{
+  background-color:var(--brand-primary);
+  color:#fff;
+}
+
+/* Obrazy w kartach/hero */
+.main-image img,
+.card img{ border-radius:.5rem; }
+
+/* Footer – ciemny, neutralny aby nie gryzł się z turkusem/zielenią */
+footer{ background-color:#22313a; color:#fff; }
+footer a{ color:inherit; }
+
+/* Pomocnicze odznaki (np. do cen bądź statusów) */
+.badge-brand{ background-color:var(--brand-primary); color:#fff; }
+.badge-accent{ background-color:var(--brand-accent); color:#5d2c3e; }
