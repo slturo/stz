@@ -1,0 +1,17 @@
+{
+  "name": "szkola-terapii-zabawa-starter",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Starter statycznej strony z Gulp + gulp-file-include + (opcjonalnie) BrowserSync i wsparciem Live Edit w IntelliJ.",
+  "scripts": {
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  }
+}

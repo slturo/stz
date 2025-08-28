@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+@@include('partials/head.html', { "title": "Strona główna" })
+<body>
+@@include('partials/header.html')
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">Profesjonalne Szkolenia Psychoterapeutyczne</h1>
+        <p class="lead mb-4">Rozwijaj swoje umiejętności w psychoterapii z doświadczonymi specjalistami. Oferujemy kompleksowy program szkoleniowy, superwizje i wsparcie w procesie
+          certyfikacji.</p>
+        <a href="program.html" class="btn btn-light btn-lg me-3">Szczegóły Szkolenia</a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg">Skontaktuj się</a>
+      </div>
+      <div class="col-lg-6">
+        <div class="main-image">
+          <img class="img-fluid rounded shadow-sm" src="assets/img/IMG_4366.jpg" alt="sala terapeutyczna">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Szkolenia Section -->
+<section id="szkolenia" class="section-padding bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary-custom">Nasze Szkolenie</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+          <div class="card-body text-center">
+            <i class="fas fa-comments fa-3x text-primary-custom mb-3"></i>
+            <h5 class="card-title">Psychoterapia Zabawą</h5>
+            <p class="card-text">Kompleksowy program obejmujący teorię i praktykę terapii zabawą.</p>
+            <a href="#" class="btn btn-primary-custom">Dowiedz się więcej</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+@@include('partials/footer.html')
+</body>
+</html>
