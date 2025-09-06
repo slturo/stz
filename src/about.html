@@ -6,7 +6,9 @@
 </head>
 <body>
 @@include('partials/header.html')
-<section id="o-nas" class="section-padding">
+
+<!-- O NAS + MISJA (jasne tło) -->
+<section id="o-nas" class="section-padding bg-light">
   <div class="container">
     <!-- Nagłówek -->
     <div class="row">
@@ -16,7 +18,7 @@
       </div>
     </div>
 
-    <!-- MISJA – pełna szerokość -->
+    <!-- MISJA -->
     <section id="misja">
       <div class="row mb-5">
         <div class="col-12">
@@ -45,114 +47,113 @@
         </div>
       </div>
     </section>
+  </div>
+</section>
 
-    <!-- ZESPÓŁ -->
-    <section id="zespol">
-      <div class="row">
-        <div class="col-12 text-center mb-4">
-          <h3 class="fw-bold text-primary-custom">Nasz zespół</h3>
-          <p class="text-muted mb-0">Poznaj osoby prowadzące szkolenia i superwizje.</p>
+<!-- NASZ ZESPÓŁ (białe tło) -->
+<section id="zespol" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h3 class="fw-bold text-primary-custom">Nasz zespół</h3>
+        <p class="text-muted mb-0">Poznaj osoby prowadzące szkolenia i superwizje.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Joanna -->
+      <div id="joanna" class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/img/team/joanna.jpg" alt="Joanna Babińska" class="rounded-circle me-3" width="56" height="56" onerror="this.style.display='none'">
+              <div>
+                <h5 class="card-title mb-0">Joanna Babińska</h5>
+                <div class="small text-muted">LPC, CPCS, RPT-S</div>
+              </div>
+            </div>
+
+            <ul class="list-unstyled mb-3">
+              <li class="d-flex align-items-center mb-2">
+                <img
+                    src="assets/img/icpta-logo.png"
+                    alt="International Consortium of Play Therapy Associations – Individual Member 2025"
+                    class="me-2 flex-shrink-0"
+                    style="height:40px;width:auto;"
+                    loading="lazy"
+                    decoding="async"
+                >
+                <span>Certyfikowana superwizorka psychoterapii i terapii zabawą</span>
+              </li>
+              <li class="d-flex">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                <span>Pracuje z dziećmi, młodzieżą, dorosłymi i rodzinami</span>
+              </li>
+            </ul>
+
+            <div class="mb-2">
+              <strong>Dom na Drzewie</strong>
+            </div>
+
+            <div class="d-flex flex-column gap-1">
+              <div><i class="fa-solid fa-phone me-2" aria-hidden="true"></i><a href="tel:+48696193375">696&nbsp;193&nbsp;375</a></div>
+              <div><i class="fa-solid fa-globe me-2" aria-hidden="true"></i><a href="https://www.centrumdomnadrzewie.pl" target="_blank" rel="noopener">centrumdomnadrzewie.pl</a></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="row g-4">
-        <!-- Joanna -->
-        <div id="joanna" class="col-md-6 col-lg-4">
-          <div class="card h-100 card-hover">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <!-- opcjonalne zdjęcie: wstaw src do swojego pliku -->
-                <img src="assets/img/team/joanna.jpg" alt="Joanna Babińska" class="rounded-circle me-3" width="56" height="56" onerror="this.style.display='none'">
-                <div>
-                  <h5 class="card-title mb-0">Joanna Babińska</h5>
-                  <div class="small text-muted">LPC, CPCS, RPT-S</div>
-                </div>
-              </div>
-
-              <ul class="list-unstyled mb-3">
-                <li class="d-flex align-items-center mb-2">
-                  <img
-                      src="assets/img/icpta-logo.png"
-                      alt="International Consortium of Play Therapy Associations – Individual Member 2025"
-                      class="me-2 flex-shrink-0"
-                      style="height:40px;width:auto;"
-                      loading="lazy"
-                      decoding="async"
-                  >
-                  <span>Certyfikowana superwizorka psychoterapii i terapii zabawą</span>
-                </li>
-
-                <li class="d-flex">
-                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
-                  <span>Pracuje z dziećmi, młodzieżą, dorosłymi i rodzinami</span>
-                </li>
-              </ul>
-
-
-              <div class="mb-2">
-                <strong>Dom na Drzewie</strong>
-              </div>
-
-              <div class="d-flex flex-column gap-1">
-                <div><i class="fa-solid fa-phone me-2" aria-hidden="true"></i><a href="tel:+48696193375">696&nbsp;193&nbsp;375</a></div>
-                <div><i class="fa-solid fa-globe me-2" aria-hidden="true"></i><a href="https://www.centrumdomnadrzewie.pl" target="_blank" rel="noopener">centrumdomnadrzewie.pl</a>
-                </div>
+      <!-- Magdalena -->
+      <div id="magdalena" class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/img/team/magdalena.jpg" alt="Magdalena Turowicz" class="rounded-circle me-3" width="56" height="56" onerror="this.style.display='none'">
+              <div>
+                <h5 class="card-title mb-0">Magdalena Turowicz</h5>
+                <div class="small text-muted">Terapeutka</div>
               </div>
             </div>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-2">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                <span>Specjalizacja: terapia zabawą, praca z rodziną</span>
+              </li>
+              <li class="d-flex">
+                <i class="fa-solid fa-book-heart text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                <span>Warsztaty i szkolenia praktyczne</span>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <!-- Magdalena -->
-        <div id="magdalena" class="col-md-6 col-lg-4">
-          <div class="card h-100 card-hover">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="assets/img/team/magdalena.jpg" alt="Magdalena Turowicz" class="rounded-circle me-3" width="56" height="56" onerror="this.style.display='none'">
-                <div>
-                  <h5 class="card-title mb-0">Magdalena Turowicz</h5>
-                  <div class="small text-muted">Terapeutka / Superwizorka</div>
-                </div>
+      <!-- Mateusz -->
+      <div id="mateusz" class="col-md-6 col-lg-4">
+        <div class="card h-100 card-hover">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/img/team/mateusz.jpg" alt="Mateusz ABC" class="rounded-circle me-3" width="56" height="56" onerror="this.style.display='none'">
+              <div>
+                <h5 class="card-title mb-0">Mateusz Kolaszkiewicz</h5>
+                <div class="small text-muted">Psychoterapeuta</div>
               </div>
-              <ul class="list-unstyled mb-0">
-                <li class="d-flex mb-2">
-                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
-                  <span>Specjalizacja: terapia zabawą, praca z rodziną</span>
-                </li>
-                <li class="d-flex">
-                  <i class="fa-solid fa-book-heart text-primary-custom me-2 mt-1" aria-hidden="true"></i>
-                  <span>Warsztaty i szkolenia praktyczne</span>
-                </li>
-              </ul>
             </div>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-2">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                <span>Doświadczenie kliniczne w pracy z dziećmi i młodzieżą</span>
+              </li>
+              <li class="d-flex">
+                <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
+                <span>Wsparcie rodzin i opiekunów</span>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <!-- Mateusz -->
-        <div id="mateusz" class="col-md-6 col-lg-4">
-          <div class="card h-100 card-hover">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="assets/img/team/mateusz.jpg" alt="Mateusz ABC" class="rounded-circle me-3" width="56" height="56" onerror="this.style.display='none'">
-                <div>
-                  <h5 class="card-title mb-0">Mateusz Kolaszkiewicz</h5>
-                  <div class="small text-muted">Psychoterapeuta</div>
-                </div>
-              </div>
-              <ul class="list-unstyled mb-0">
-                <li class="d-flex mb-2">
-                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
-                  <span>Doświadczenie kliniczne w pracy z dziećmi i młodzieżą</span>
-                </li>
-                <li class="d-flex">
-                  <i class="fa-solid fa-circle-check text-primary-custom me-2 mt-1" aria-hidden="true"></i>
-                  <span>Wsparcie rodzin i opiekunów</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div><!-- /row -->
-    </section>
+    </div><!-- /row -->
   </div>
 </section>
 
