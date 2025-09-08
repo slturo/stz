@@ -6,16 +6,48 @@
 </head>
 <body>
 @@include('partials/header.html')
-<section id="superwizje" class="section-padding">
+
+<!-- KONTAKT (jasne tło) -->
+<section id="kontakt" class="section-padding bg-light">
   <div class="container">
-    <div class="row align-items-center">
-      <h5>Kontakt</h5>
-      @@include('partials/phone.html')
-      @@include('partials/email.html')
-      @@include('partials/address.html')
+    <!-- Nagłówek -->
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary-custom">Kontakt</h2>
+      </div>
     </div>
+
+    <!-- KARTA KONTAKTU -->
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-hover border-0 shadow-sm">
+          <div class="card-body p-4 p-lg-5">
+            <div class="d-flex align-items-center mb-4">
+              <i class="fa-solid fa-envelope-open-text text-primary-custom me-2" aria-hidden="true"></i>
+              <h5 class="card-title mb-0">Skontaktuj się z nami</h5>
+            </div>
+
+            <!-- elementy kontaktowe jeden pod drugim -->
+            <div class="d-flex flex-column gap-3">
+              <div>
+                @@include('partials/phone.html')
+              </div>
+              <div>
+                @@include('partials/email.html')
+              </div>
+              <div>
+                @@include('partials/address.html')
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 @@include('partials/footer.html')
 </body>
 </html>

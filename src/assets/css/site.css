@@ -34,25 +34,21 @@ body{
 }
 
 /* --- GLOBALNY OFFSET dla skoków do #kotwic (fixed navbar) --- */
-/* Równo pod paskiem – bez dodatkowej „poduszki”, żeby nie było szarego paska */
 :where(section, div, article, main, header, footer, aside, nav,
        ul, ol, li, h1, h2, h3, h4, h5, h6)[id]{
   scroll-margin-top: var(--nav-h);
 }
 
-/* Fallback tam, gdzie nie ma scroll-margin-top */
 @supports not (scroll-margin-top: 1px){
   :where(section, div, article, main, header, footer, aside, nav,
-         ul, ol, li, h1, h2, h3, h4, h5, h6)[id]{
-    position: relative;
-  }
+         ul, ol, li, h1, h2, h3, h4, h5, h6)[id]{ position:relative; }
   :where(section, div, article, main, header, footer, aside, nav,
          ul, ol, li, h1, h2, h3, h4, h5, h6)[id]::before{
     content:"";
     display:block;
     height:var(--nav-h);
     margin-top:calc(-1 * var(--nav-h));
-    background:inherit; /* tło jak sekcja docelowa */
+    background:inherit;
   }
 }
 
@@ -173,59 +169,65 @@ body{
 }
 
 /* ------------------------------
+   Dropdown – hover w submenu (tylko kolor tekstu)
+------------------------------ */
+.dropdown-menu .dropdown-item{ transition: color .2s ease; }
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus{
+  color:var(--brand-primary);
+  background-color:transparent;
+}
+
+/* ------------------------------
    Sekcje / komponenty
 ------------------------------ */
-
-/* HERO: full viewport, także na iOS (svh).
-   Na mobile mniejsze fonty i pionowe odstępy + przyciski w kolumnie. */
 .hero-section{
   background:linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
   color:#fff;
-  min-height:calc(100vh - var(--nav-h));       /* fallback */
-  min-height:calc(100svh - var(--nav-h));      /* iOS/Android – realny viewport */
+  min-height:calc(100vh - var(--nav-h));
+  min-height:calc(100svh - var(--nav-h));
   display:flex;
   align-items:center;
   padding:64px 0;
 }
 .hero-section .lead{ opacity:.95; }
 
-/* obrazek nie klei się do tekstu */
 .hero-section .main-image{ margin-top:1rem; }
 .hero-section .main-image img{ border-radius:.75rem; box-shadow:0 10px 30px rgba(0,0,0,.12); }
 
-/* przyciski – jasny wariant i kontrast */
 .hero-section .btn.btn-outline-light{
-  border-color:#fff;
-  color:#fff;
+  border-color:#fff; color:#fff;
 }
 .hero-section .btn.btn-outline-light:hover{
-  background:#fff;
-  color:var(--brand-primary);
+  background:#fff; color:var(--brand-primary);
 }
 
-/* MOBILE HERO TWEAKS */
 @media (max-width:767.98px){
   .hero-section{ padding:48px 0 56px; align-items:flex-start; }
   .hero-section h1{
-    font-size:clamp(2.1rem, 8vw, 2.6rem);
-    line-height:1.15;
-    margin-bottom:1rem;
+    font-size:clamp(2.1rem, 8vw, 2.6rem); line-height:1.15; margin-bottom:1rem;
   }
   .hero-section .lead{
-    font-size:clamp(1.02rem, 4.2vw, 1.18rem);
-    line-height:1.55;
-    margin-bottom:1rem;
+    font-size:clamp(1.02rem, 4.2vw, 1.18rem); line-height:1.55; margin-bottom:1rem;
   }
-  /* przyciski pod sobą, WYŚRODKOWANE */
+
+  /* >>> FIX: wyśrodkowane przyciski na mobile,
+     nadpisuje m.in. .me-3 z Bootstrapa */
   .hero-section .btn{
     display:block;
     width:100%;
     max-width:360px;
     padding:.8rem 1rem;
     font-size:1rem;
-    margin-inline:auto;   /* <— centrum */
+    margin:0.75rem auto 0 !important; /* auto L/R + override me-3 */
   }
-  .hero-section .btn + .btn{ margin-top:.75rem; }
+  .hero-section .btn:first-child{
+    margin-top:0 !important;
+  }
+  .hero-section .btn + .btn{
+    margin-top:.75rem !important;
+  }
+
   .hero-section .main-image{ margin-top:1.25rem; }
 }
 
@@ -249,26 +251,20 @@ body{
 
 /* Przyciski globalne */
 .btn-primary-custom{
-  background-color:var(--brand-primary);
-  border-color:var(--brand-primary);
-  color:#fff;
+  background-color:var(--brand-primary); border-color:var(--brand-primary); color:#fff;
 }
 .btn-primary-custom:hover{
-  background-color:#239eab;
-  border-color:#239eab;
+  background-color:#239eab; border-color:#239eab;
 }
 .btn-outline-primary{
-  color:var(--brand-primary);
-  border-color:var(--brand-primary);
+  color:var(--brand-primary); border-color:var(--brand-primary);
 }
 .btn-outline-primary:hover{
-  background-color:var(--brand-primary);
-  color:#fff;
+  background-color:var(--brand-primary); color:#fff;
 }
 
 /* Obrazy ogólne */
-.main-image img,
-.card img{ border-radius:.5rem; }
+.main-image img, .card img{ border-radius:.5rem; }
 
 /* Footer – ciemny, neutralny */
 footer{ background-color:#22313a; color:#fff; }
@@ -277,14 +273,3 @@ footer a{ color:inherit; }
 /* Odznaki pomocnicze */
 .badge-brand{ background-color:var(--brand-primary); color:#fff; }
 .badge-accent{ background-color:var(--brand-accent); color:#5d2c3e; }
-
-/* Hover w submenu – tylko zmiana koloru tekstu */
-.dropdown-menu .dropdown-item {
-  transition: color .2s ease;
-}
-
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus {
-  color: var(--brand-primary);
-  background-color: transparent; /* brak zmiany tła */
-}

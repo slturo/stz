@@ -1,4 +1,3 @@
-
 const { src, dest, series, parallel, watch } = require('gulp');
 const fileInclude = require('gulp-file-include');
 const del = require('del');
@@ -16,30 +15,26 @@ function clean() {
 
 function html() {
   return src(paths.html)
-    .pipe(fileInclude({ prefix: '@@', basepath: 'src' }))
-    .pipe(dest(paths.dist));
+      .pipe(fileInclude({ prefix: '@@', basepath: 'src' }))
+      .pipe(dest(paths.dist))
+      .pipe(browserSync.stream()); // <- triggers reload
 }
 
 function assets() {
-  return src(paths.assets).pipe(dest(paths.dist + '/assets'));
+  return src(paths.assets)
+      .pipe(dest(`${paths.dist}/assets`))
+      .pipe(browserSync.stream()); // <- triggers reload
 }
 
-function reload(done) {
-  browserSync.reload();
-  done();
-}
+function serve() {
+  browserSync.init({ server: { baseDir: paths.dist }, open: false });
 
-function serveTask() {
-  browserSync.init({ server: paths.dist, open: false });
-  watch('src/**/*.html', series(html, reload));
-  watch('src/assets/**/*', series(assets, reload));
-}
-
-function watchTask() {
-  watch('src/**/*.html', html);
-  watch('src/assets/**/*', assets);
+  // return the watchers so Gulp keeps the task running
+  const w1 = watch('src/**/*.html', html);
+  const w2 = watch('src/assets/**/*', assets);
+  return Promise.all([w1, w2]); // or just: return; (either keeps process open)
 }
 
 exports.build = series(clean, parallel(html, assets));
-exports.serve = series(exports.build, serveTask);
-exports.watch = series(exports.build, watchTask);
+exports.serve = series(exports.build, serve);
+exports.watch = exports.serve;

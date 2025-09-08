@@ -1,4 +1,7 @@
 # stz
 
 to run app:
-`gulp serve`
+`npm run serve`
+
+build release:
+`npm run build`

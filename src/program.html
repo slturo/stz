@@ -7,18 +7,21 @@
 <body>
 @@include('partials/header.html')
 
-<section id="superwizje" class="section-padding">
+<!-- SEKCJA 1: Nagłówek + Zakres/Cel (jasne tło) -->
+<section id="zakres" class="section-padding bg-light">
   <div class="container">
     <!-- Nagłówek -->
     <div class="row">
       <div class="col-lg-9 mx-auto text-center mb-5">
-        <h2 class="display-5 fw-bold text-primary-custom">Superwizje – program i wymagania</h2>
-        <p class="lead mb-0">Przygotowanie do <strong>Certyfikatu Terapeuty Zabawą PTTZ</strong> poprzez integrację wiedzy, praktyki klinicznej i superwizji.</p>
+        <h2 class="display-5 fw-bold text-primary-custom">Program</h2>
+        <p class="lead mb-0">
+          Przygotowanie do <strong>Certyfikatu Terapeuty Zabawą PTTZ</strong> poprzez integrację wiedzy, praktyki klinicznej i superwizji.
+        </p>
       </div>
     </div>
 
     <!-- Cel / Zakres -->
-    <div class="row g-4 mb-4">
+    <div class="row g-4">
       <!-- Cel szkolenia -->
       <div id="cel" class="col-md-6">
         <div class="card h-100 card-hover">
@@ -37,7 +40,7 @@
       </div>
 
       <!-- Zakres szkolenia -->
-      <div id="zakres" class="col-md-6">
+      <div id="zakres-szkolenia" class="col-md-6">
         <div class="card h-100 card-hover">
           <div class="card-body">
             <div class="d-flex align-items-center mb-3">
@@ -73,12 +76,16 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- /row -->
+  </div>
+</section>
 
-    <!-- Program / Superwizja -->
-    <div class="row g-4 mb-4">
-      <!-- Szczegółowy program -->
-      <div id="program" class="col-lg-7">
+<!-- SEKCJA 2: Harmonogram (czyli szczegółowy program) + Doświadczenie (białe tło) -->
+<section id="harmonogram" class="section-padding">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Szczegółowy program (Harmonogram) -->
+      <div class="col-lg-7">
         <div class="card h-100 card-hover">
           <div class="card-body">
             <div class="d-flex align-items-center mb-3">
@@ -141,10 +148,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- /row -->
+  </div>
+</section>
 
-    <!-- Kadra / Warunki -->
-    <div class="row g-4 mb-4">
+<!-- SEKCJA 3: Kadra / Warunki (jasne tło) -->
+<section id="kadra-warunki" class="section-padding bg-light">
+  <div class="container">
+    <div class="row g-4">
       <!-- Kadra szkoleniowa -->
       <div id="kadra" class="col-lg-6">
         <div class="card h-100 card-hover">
@@ -186,10 +197,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- /row -->
+  </div>
+</section>
 
-    <!-- Kompetencje absolwenta -->
-    <div id="kompetencje" class="row g-4">
+<!-- SEKCJA 4: Kompetencje (białe tło) -->
+<section id="kompetencje" class="section-padding">
+  <div class="container">
+    <div class="row g-4">
       <div class="col-12">
         <div class="card h-100 card-hover">
           <div class="card-body">
